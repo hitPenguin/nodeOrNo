@@ -1,4 +1,4 @@
-# javascript | 补充 后端相关
+# javascript | 补充
 
 ## CORS 与 JSONP
 

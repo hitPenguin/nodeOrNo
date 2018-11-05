@@ -15,7 +15,7 @@
 ```
 3. 服务器端接收并验证后，返回 request URI
 
-### DIGEST 认证 | 从 http/1.1 开始
+### DIGEST 认证 | 从 http/1.1 开始 | response 会对各个首部添加认证
 
 1. 若请求的资源需要 DIGEST 验证,服务器返回401 和 WWW-Authenticate 首部字段，并发送临时的质询码(随机数，nonce)
 ```

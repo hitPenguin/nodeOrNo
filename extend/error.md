@@ -24,7 +24,7 @@
     // leave out code ...
   }
 ```
-* 注意添加新的api时要在对应的local配置中注意proxy和bodyparser
+* garen | 注意添加新的api时要在对应的local配置中注意proxy和bodyparser
 ```js
   // config文件中
   bodyparser: {

@@ -132,12 +132,12 @@ no-transform | 无 | 告知缓存不要改变实体主体的媒体类型
 
 5. Authorization | 用户代理的认证信息
 
-* 待续
+* Basic 认证
 
 6. Expect
 
 ```
-  Except： 100-continue
+  Expect： 100-continue
   客户端可以写入自己期待的特定行为，服务器无法理解会返回 417 Expectation Failed
 ```
 
@@ -197,7 +197,7 @@ no-transform | 无 | 告知缓存不要改变实体主体的媒体类型
 
 * 即当前请求的来源 url ：比如百度上点击网址跳转，Referer 即为 www.baidu.com
 
-14. TE | 类似 Accept-Encoding，但用于传输编码
+14. TE | 类似 Accept-Encoding，但用于传输编码(Transport Encoding)
 
 15. User-Agent 字段 | 用户代理的信息
 
