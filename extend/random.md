@@ -42,3 +42,39 @@
 
 * 只管卖披萨
 * Pizza-as-a-Service
+
+# dependencies | devDependencies
+
+* `npm install Xxx --save` | 安装模块，并把模块名和版本号添加到dependencies 部分
+* `npm install Xxx --save-dev` | 安装模块,把模块名和版本号写在devdependencies部分
+* `npm install --production` | 安装 dependencies 部分的模块
+* `npm i` | 安装所有devDependencies 和 dependencies里面的模块
+
+# 根域名
+
+* DNS 根区 (DNS root zone) | 提供顶级域名所对应的域名服务器和服务器 ip (IPv4, IPv6)
+
+# CAP 定理
+
+* Consistency | 一致性
+```js
+  /**
+   * @一致性
+   *  所有的服务器的数据应该保持一致
+   */
+```
+* Availability | 可用性
+```js
+  /**
+   * @可用性
+   *  只要收到用户请求，服务器必须要给出回应
+   */
+```
+* Partition tolerance | 分区容错
+```js
+  /**
+   * @分区容错
+   *  区间通信可能失败
+   */
+```
+* 可用性和一致性不能同时成立，要考虑特殊场合的优先性
