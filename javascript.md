@@ -1,11 +1,5 @@
 # javascript | 补充
 
-## CORS 与 JSONP
-
-```
-只要服务器实现了CORS接口，就可以跨源通信。
-```
-
 ## 代码覆盖工具 Istanbul
 
 
