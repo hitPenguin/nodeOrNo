@@ -18,7 +18,7 @@
 * buffer 遵从 slab 分配
 ```js
   /**
-   * @pool
+   * @param {String} pool
    *  固定大小为 8kb
    *  有三个状态: full partical empty
    *  小于 8kb 的 buffer 对象按顺序放在 pool 里， 放不下再申请一个 8kb。
