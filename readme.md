@@ -9,6 +9,6 @@
   路漫漫其修远兮啊。。。
 ```
 
- [鸟哥的 linux 私房菜 ](https://github.com/hitPenguin/nodeOrNo/tree/master/bird-linux)
- [图解http](https://github.com/hitPenguin/nodeOrNo/tree/master/learn-http-deeply)
- [egg框架源码](https://github.com/hitPenguin/nodeOrNo/tree/master/egg-framework)
+ * [鸟哥的 linux 私房菜 ](https://github.com/hitPenguin/nodeOrNo/tree/master/bird-linux)
+ * [图解http](https://github.com/hitPenguin/nodeOrNo/tree/master/learn-http-deeply)
+ * [egg框架源码](https://github.com/hitPenguin/nodeOrNo/tree/master/egg-framework)
