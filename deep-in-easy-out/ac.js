@@ -1,5 +1,14 @@
-console.log('app');
+class Client {
+  on(event, handler) {
+    this[event] = this[event] ? [...this[event], handler] : [handler];
+  }
+  emit(event) {
+    const args = Array.prototype.slice.call(arguments, 1);
+    this[event].forEach((handler) => handler(...args));
+  }
+}
 
-module.exports = 'a';
+const events = new Client();
 
-exports = 'a';
+events.on('app', (a, b) => console.log(a, b));
+events.emit('app', 'app', 'bpp');

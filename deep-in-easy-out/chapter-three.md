@@ -35,3 +35,14 @@
 * 在 *nix 平台下，使用异步I/O库 libeio 和 libev 配合使用 | 在 windows 下是 IOCP 机制
 * 双平台都是利用 线程池 和 阻塞 I/O 实现 异步 I/O，只不过 windows 是内核管理线程池
 * 平台间兼容都是通过 抽象中间层 libuv 实现的。
+
+
+## 非 I/O 的异步 API
+
+* setTimeout, setInterval, setImmediate, process.nextTick
+* setTimeout | setInterval
+```
+  setTimeout 和 setInterval 本质上都是会生成定时器对象，插入内部的一个红黑树中，在 Timer Phase 阶段取出查看是否过期
+  setImmediate 是将函数放在 check 阶段
+  process.nextTick 是将代码放在当前代码执行栈的最后
+```

@@ -16,7 +16,7 @@
       }
       emit(event) {
         const args = Array.prototype.slice.call(arguments, 1);
-        this[event].forEach((handler) => handler(args));
+        this[event].forEach((handler) => handler(...args));
       }
     }
   ```
@@ -27,7 +27,7 @@
 * Node 应用场景
   1. I/O密集型： 通过异步 I/O 模型和事件回调机制充分利用硬件资源
   2. cpu 密集型： 可通过 C/C++ 拓展 或 多进程模型来充分利用多核 cpu 资源
-  3. 与遗留系统的兼容： 没问题嘛
+  3. 与遗留系统的兼容： 没问题嘛(php, java等)
   4. 分布式应用： 
 
 # 总结
