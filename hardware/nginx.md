@@ -74,6 +74,12 @@ $http_x_forwarded_for | 原有的客户端 ip 和原来客户请求的 服务器
   5. location /uri | 前缀匹配，优先级弱于正则匹配
   6. location / | 通用匹配，相当于 switch 的 default
 
+* 在 nginx 转发 websocket 协议时，需要在 nginx.conf 文件中进行配置
+```
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+```
+
 
 ### 简化后的文件概览
 
