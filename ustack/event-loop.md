@@ -10,7 +10,7 @@
 
 2. Pending I/O Callback Phase
 3. Idle, Prepare Phase | 内部阶段 不讨论
-4. Poll Phase
+4. Poll Phase |  大部分的 I/O callback 在此阶段执行 
 
 * poll队列不为空的时候，事件循环肯定是先遍历队列并同步执行回调，直到队列清空或执行回调数达到系统上限
 * poll队列为空的时候，这里有两种情况。
