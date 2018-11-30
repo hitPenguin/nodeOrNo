@@ -9,7 +9,7 @@ function swap(array, one, other) {
   array[other] = tem;  
 }
 
-// 三种算法最优的是 直接插入法
+// 纯随机情况下，基本算法的优越度: 直接插入算法 > 选择法 > 冒泡法
 
 // 选择法
 /**
@@ -68,4 +68,4 @@ function insertionSort(array) {
     }
   }
   console.log(array);
-}shi
+}

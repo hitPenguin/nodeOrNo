@@ -2,6 +2,12 @@
 
 * 异步 I/O 之所以流行，是因为在计算机资源中， I/O 与 cpu 计算是可以并行的。
 
+## 备注
+
+```
+  (同步)异步 I/O 与 (非)阻塞 I/O 不能同等对待
+  非阻塞 I/O 虽然可能同时处理多个流， 但是因轮询机制需要消耗更多的计算机资源
+```
 
 ## 进程和线程的问题
 
@@ -36,6 +42,10 @@
 * 双平台都是利用 线程池 和 阻塞 I/O 实现 异步 I/O，只不过 windows 是内核管理线程池
 * 平台间兼容都是通过 抽象中间层 libuv 实现的。
 
+## 请求对象
+
+* javascript 调用 Node 核心模块，核心模块调用 C++ 的内建模块，内建模块通过 libuv 进行系统调用。
+* uv_fs_open() 创建了 `FSReqWrap` 对象 | 相关回调放在 oncomplete_sym 属性上
 
 ## 非 I/O 的异步 API
 
@@ -44,5 +54,6 @@
 ```
   setTimeout 和 setInterval 本质上都是会生成定时器对象，插入内部的一个红黑树中，在 Timer Phase 阶段取出查看是否过期
   setImmediate 是将函数放在 check 阶段
-  process.nextTick 是将代码放在当前代码执行栈的最后
+  process.nextTick 是将代码放在当前代码执行栈的最后 
+  定时器红黑树操作 算法复杂度 O(lg(n)), process.nextTick 的时间复杂度是 O(1)
 ```
