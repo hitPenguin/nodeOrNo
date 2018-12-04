@@ -1,4 +1,4 @@
-# Node.js | event 模块
+# Node.js | events 模块
 
 ```js
   events.EventEmitter() // 可以 new 也可以 继承
