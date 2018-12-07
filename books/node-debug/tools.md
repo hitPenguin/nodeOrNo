@@ -91,3 +91,60 @@
   ]
 ```
 * 拿出 `webSocketDebuggerUrl` 中的值，直连 inspector
+
+## Istanbul 工具包
+
+* istanbul 是 代码覆盖率 测试工具包
+```js
+  /**
+   * Statements: 语句
+   * Branches: 分支
+   * Functions: 函数
+   * Lines: 代码行数
+```
+* 覆盖率门槛
+```bash
+  istanbul check-coverage [options]
+  # --statement -1 (90) || -1 只允许一条语句不被覆盖 / 90 覆盖率要达到 90%
+  # --statement -5 --branch -3 --function 100 参数可以结合使用
+```
+* istanbul 和 mocha 的结合
+```bash
+  istanbul cover _mocha test/test.sqrt.js
+```
+* istanbul 忽略某些代码
+```js
+  var object = parameter || /* istanbul ignore next */ {}; // 注释要卸载 或 运算符的后面
+  /* istanbul ignore if  */
+  if (hardToReproduceError)) {
+      return callback(hardToReproduceError);
+  }
+```
+
+## 压力测试 | ab
+
+```bash
+  ab --help
+  # -n : 总的请求数量
+  # -c : 请求的并发数量
+  # -t : 花费在基准测试的最大时间 
+  # -s : 单个 response 的最大响应时间
+```
+
+```json
+  {
+    "Document Path": "文档路径: /",
+    "Document Length": "报文的长度",
+    "Concurrency Level": "并发的数量(级别)",
+    "time taken for tests": "完成所有测试所需要的时间",
+    "Complete requests": "完成的请求数",
+    "Failed requests": "失败的请求数",
+    "Total transferred": "所有的报文大小",
+    "HTML transferred": "仅 http 报文的正文大小",
+    "Requests per second": "服务器每秒能处理多少请求(RPS || QPS)",
+    "两个Time per request": "分别代表 用户平均等待时间 和 服务器平均处理请求 的事件",
+    "Transfer rate": "传输的大小除以传输事件",
+    "Connection Times": "连接时间, 包括 建立连接，服务器处理，等待响应 的时间",
+    "The Last": "请求的响应时间分布"
+  }
+```
