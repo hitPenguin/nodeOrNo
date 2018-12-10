@@ -1,6 +1,7 @@
 # 鸟哥的私房菜 | 第十章
 
-* `sudo <command>` | 默认建立安全shell, path 去 `/etc/sudoers` 里面找
+* `sudo <command>` | 默认建立安全shell, path 去 `/etc/sudoers` 里面找 `secure_path`
+* `root 中的 PATH` 和 `user 中的 PATH` 和 `sudo <command> 去查找的 PATH`是不一样的
 
 * shell 泛指 壳 程序，是可以输入命令和操作系统内核命令进行交互的程序
 * bash 是 shell 的一种

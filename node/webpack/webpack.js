@@ -1,6 +1,6 @@
 
 // webpack.config.js
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // 加载插件
 
 module.exports = {
   entry: {
