@@ -1,5 +1,7 @@
 # 鸟哥的私房菜 | 第十章
 
+* `sudo <command>` | 默认建立安全shell, path 去 `/etc/sudoers` 里面找
+
 * shell 泛指 壳 程序，是可以输入命令和操作系统内核命令进行交互的程序
 * bash 是 shell 的一种
 ```bash

@@ -1,0 +1,6 @@
+{
+  "babel example.js": "结果输出到标准输出",
+  "babel a.js --out-file b.js": "babel a.js -o b.js",
+  "babel src --out-dir lib": "babel src -d lib",
+  "babel src -d lib -s": "-s 参数生成 sourcemap 文件"
+}
